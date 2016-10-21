@@ -65,5 +65,5 @@ angular.module('exampleapp', [
         template: '<ui-get-started></ui-get-started>'
       });
 
-    $urlRouterProvider.otherwise('/multiselect');
+    $urlRouterProvider.otherwise('/button');
   });
