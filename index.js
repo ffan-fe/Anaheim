@@ -7,19 +7,30 @@ import ffanRadioboxGroup from './src/components/radiobox.group';
 import ffanCitySelector from './src/components/city.selector';
 import ffanTransfer from './src/components/transfer';
 import ffanDatetimepicker from './src/components/datetimepicker';
-import bpServices from './bp-utils/src/service/index.js'
+import bpServices from './src/service/index.js'
+import checkboxtree from './src/components/checkboxtree/index.js'
+import multiselect from './src/components/multiselect/index.js'
+import bpDirective from './src/directive/index.js'
+import formTpl from './src/template/form/index.js'
+import listTpl from './src/template/list/index.js'
 
 'use strict';
 
-export let Button = ffanButton;
-export let Icon = ffanIcon;
-export let Checkbox = ffanCheckbox;
-export let CheckboxGroup = ffanCheckboxGroup;
-export let Radiobox = ffanRadiobox;
-export let RadioboxGroup = ffanRadioboxGroup;
-export let CitySelector = ffanCitySelector;
-export let Transfer = ffanTransfer;
-export let Datetimepicker = ffanDatetimepicker;
-export let bpServices = bpServices;
+export {ffanButton as Button,
+  ffanCheckbox as Checkbox,
+  ffanCheckboxGroup as CheckboxGroup,
+  ffanRadiobox as Radiobox,
+  ffanRadioboxGroup as RadioboxGroup,
+  ffanCitySelector as CitySelector,
+  ffanTransfer as Transfer,
+  ffanDatetimepicker as Datetimepicker,
+  bpServices ,
+  checkboxtree,
+  multiselect,
+  bpDirective,
+  formTpl,
+  listTpl
+}
+
 
 
