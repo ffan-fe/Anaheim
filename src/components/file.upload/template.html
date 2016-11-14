@@ -1,6 +1,8 @@
 <button 
   type="button"
-  ng-class="controller.config.button.className"
-  ng-disabled="controller.state.disabled"
->上传文件
+  name="file"
+  ng-class="controller.base.className"
+  ngf-select="controller.uploadFile($file)"
+  ngf-accept="controller.base.accept"
+>{{controller.base.btnContent}}
 </button>

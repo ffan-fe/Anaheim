@@ -2,8 +2,20 @@
 <section>
   <h3>默认文件上传</h3>
   <bp-file-upload
-    model="vm.model"
+    type="{{vm.type}}"
+    btn-size ="{{vm.btnSize}}"
+    result="vm.model"
+    width="vm.width"
+    height="vm.height"
   >
+    <!--max-file-size="vm.maxFileSize"
+    min-file-size="vm.minFileSize"-->
+    <!--min-height="vm.minHeight"
+    min-width="vm.minWidth"
+    max-width="vm.maxWidth"
+    max-height="vm.maxHeight"-->
+    <!--accept="{{vm.accept}}"-->
+    <!--btn-type ="{{vm.btnType}}"-->
   </bp-file-upload>
   <h3>HTML</h3>
   <pre><code class="language-html" ng-bind-html="vm.html1"></code></pre>

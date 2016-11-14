@@ -20,12 +20,25 @@ import colorsSupported from 'supports-color';
 
 import yargs from 'yargs';
 
+import proxy from 'http-proxy-middleware';
+
+
 'use strict';
 
 /**
  * 默认任务, 里面是跑测试应用
  */
 gulp.task('default', ['dev']);
+
+let chuckNorrisApiProxy = proxy(['/System'], {
+    target: 'http://admin.sit.ffan.com',
+    changeOrigin: true,
+    logLevel: 'debug',
+    headers:{
+      Cookie:"PHPSESSID=b1suuas14d18qprpq72d5t4sr2"
+    }
+});
+
 /**
  * 开始模式, 跑起来测试模块
  */
@@ -52,11 +65,13 @@ gulp.task('dev', callback => {
             chunks: false,
             modules: false
           }
-        })
+        }),
+        chuckNorrisApiProxy
       ]
     }
   );
 });
+
 /**
  * 编译整个组件
  */
