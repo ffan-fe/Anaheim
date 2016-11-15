@@ -13,6 +13,7 @@ import template from './template.html';
  * @property {String}   btnType         - binding symbol is @, 此类型针对的是按钮样式, 比如选了primary class会出现 `bp-btn-primary`, 默认值是primary, 可选值[default, primary, danger]
  * @property {String}   btnSize         - binding symbol is @, 按钮大小, 和bootstrap一样, 不填则是默认大小
  * @property {String}   btnContent      - binding symbol is @, 按钮展示的文本，（文件：默认展示'上传文件'  图片：默认展示'上传图片'）
+ * @property {Bollean}  disabled        - binding symbol is @, 禁用
  * @property {Number}   minFileSize     - binding symbol is @, 上传图片的最小值
  * @property {Number}   maxFileSize     - binding symbol is @, 上传图片的最大值, 如5242880（1024*1024*5 = 5MB, 默认为5242880）
  * @property {String}   accept          - binding symbol is @, 接收的图片类型，多个以逗号隔开 (文件：默认为 '.xls, .xlsx'  图片：默认 'image/*')
@@ -23,7 +24,7 @@ import template from './template.html';
  * @property {Number}   minHeight       - binding symbol is <, 上传图片的最小高度
  * @property {Number}   maxHeight       - binding symbol is <, 上传图片的最大高度
  * @property {Bollean}  setMin          - binding symbol is <, 参数=true，与minHeight、minWidth同时使用，限制最小宽高比，且必须满足最小宽高比
- * @property {Object}   result          - binding symbol is =, 上传后的返回数据
+ * @property {Object}   model           - binding symbol is =, 上传后的返回数据
  */
 let componentDefine = {
   template,
@@ -34,6 +35,7 @@ let componentDefine = {
     btnType: '@',
     btnSize: '@',
     btnContent: '@',
+    disabled: '<',
     minFileSize: '<',
     maxFileSize: '<',
     accept: '@',
@@ -44,7 +46,7 @@ let componentDefine = {
     minHeight: '<',
     maxHeight: '<',
     setMin: '<',
-    result: '='
+    model: '='
   }
 }
 

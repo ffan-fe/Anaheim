@@ -1,6 +1,7 @@
 <button 
   type="button"
   name="file"
+  ng-disabled="controller.disabled"
   ng-class="controller.base.className"
   ngf-select="controller.uploadFile($file)"
   ngf-accept="controller.base.accept"

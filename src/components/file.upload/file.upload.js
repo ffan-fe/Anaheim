@@ -1,7 +1,29 @@
 /**
- * Fileupload
+ * @ngdoc directive
+ * @name fileupload.directive:bpFileUpload
+ * @restrict E
+ * @description
+ * - 上传文件组件
+ * - 上传图片组件
+ * 
+ * @param {String}   type      	   - binding symbol is @, 是单个时间组件还是时间范围组件
+ * @param {String}   model       	 - binding symbol is =?, 单个时间值
+ * @param {String}   startModel    - binding symbol is =?, 范围时间组件，开始时间值
+ * @param {String}   endModel      - binding symbol is =?, 范围时间组件，结束时间值
+ * @param {String}   min       		 - binding symbol is <, 最小时间限制
+ * @param {String}   max   			   - binding symbol is <, 最大时间限制
+ * @param {String}   startView  	 - binding symbol is @, 开始时间视图
+ * @param {String}   minView       - binding symbol is @, 最小时间视图
+ * @param {Number}   minuteStep    - binding symbol is <, 分钟间隔
+ * @param {String}   modelType     - binding symbol is @, 显示的格式 YYYY-MM-DD 还是其他，默认到分
+ * @param {Boolean}  startDisabled - binding symbol is <, 开始时间Disabled
+ * @param {Boolean}  endDisabled   - binding symbol is <, 结束时间Disabled
+ * @param {Boolean}  disabled      - binding symbol is <, Disabled状态
+ * @param {Array}    placeholders  - binding symbol is <, placeholders
+ * @param {String}   separator     - binding symbol is @, 范围时间分隔符，默认'至'
+ *
+ 更多例子的[传送门](https://ffan-fe.github.io/Anaheim/#/fileupload)
  */
-
 import Component from '../common/component';
 import classNames from 'classnames';
 
@@ -83,10 +105,11 @@ export default class Fileupload extends Component {
       }).then(
         response => {
           if (response && response.data && response.data.status == 200) {
-            this.result = response.data.data;
+            this.model = response.data.data;
           } else {
             response && response.data && window.alert(response.data.msg);
           }
+          this.disabled = false;
         }
       )
     }

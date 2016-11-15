@@ -35,7 +35,7 @@ let chuckNorrisApiProxy = proxy(['/System'], {
     changeOrigin: true,
     logLevel: 'debug',
     headers:{
-      Cookie:"PHPSESSID=b1suuas14d18qprpq72d5t4sr2"
+      Cookie:"PHPSESSID=t1fcv6fkedrpg7pi7sjbnghp37"
     }
 });
 
