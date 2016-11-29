@@ -1,5 +1,6 @@
 import loaclData from './localData.js';
 import angular from 'angular';
+import fixDomain from '../../index.js'
 
 'use strict';
 
@@ -31,6 +32,7 @@ export default class CitySelectorController {
     this.database = database;
     // 做回填的时候, 也需要回填各种状态, 这里记录好有变化的省份, 然后上下检查, 比较方便
     this.fillProvinceList = [];
+    console.log("fixDomain ", fixDomain);
   }
   $onInit() {
     // 如果外部提供了数据集, 那么就不再发请求了
@@ -39,8 +41,8 @@ export default class CitySelectorController {
       this.formatData(this.regionList);
       return;
     }
-    // 这个请求实际上只能运行在xadmin这个环境下
-    this.loadPromise = this.$http.get('/Database/coupon_component/selectCity')
+
+    this.loadPromise = this.$http.get(fixDomain('/Database/coupon_component/selectCity'))
       .then(
         response => {
           if (response && response.data && response.data.status == 200) {
