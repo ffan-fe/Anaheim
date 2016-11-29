@@ -20,6 +20,7 @@ import CitySelector from './cityselector';
 import Datetimepicker from './datetimepicker';
 import GetStarted from './get-started/get-started';
 import popConfirm from './popconfirm';
+import FileUpload from './fileupload';
 
 import 'bp-admin-skin'
 
@@ -58,6 +59,7 @@ angular.module('exampleapp', [
   GetStarted.name,
   nav.name,
   popConfirm.name,
+  FileUpload.name,
   nav.name,
   form.name,
   list.name,
@@ -104,6 +106,10 @@ angular.module('exampleapp', [
       .state('popconfirm', {
         url: '/popconfirm',
         template: '<pop-confirm-show></pop-confirm-show>'
+      })
+      .state('fileupload', {
+        url: '/fileupload',
+        template: '<file-upload-show></file-upload-show>'
       });
 
     $urlRouterProvider.otherwise('/getstarted');

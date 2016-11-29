@@ -7,6 +7,7 @@ import ffanRadioboxGroup from './src/components/radiobox.group';
 import ffanCitySelector from './src/components/city.selector';
 import ffanTransfer from './src/components/transfer';
 import ffanDatetimepicker from './src/components/datetimepicker';
+import ffanFileUpload from './src/components/file.upload';
 import bpServices from './src/service/index.js';
 import checkboxtree from './src/components/checkboxtree';
 import multiselect from './src/components/multiselect';
@@ -28,7 +29,8 @@ export {
   ffanTransfer as Transfer,
   ffanDatetimepicker as Datetimepicker,
   ffanPopConfirm as PopConfirm,
-  bpServices ,
+  ffanFileUpload as FileUpload,
+  bpServices,
   checkboxtree,
   multiselect,
   bpDirective,

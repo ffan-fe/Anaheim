@@ -1,5 +1,6 @@
 import loaclData from './localData.js';
 import angular from 'angular';
+import { fixDomain } from '../../index.js'
 
 'use strict';
 
@@ -39,8 +40,8 @@ export default class CitySelectorController {
       this.formatData(this.regionList);
       return;
     }
-    // 这个请求实际上只能运行在xadmin这个环境下
-    this.loadPromise = this.$http.get('/Database/coupon_component/selectCity')
+
+    this.loadPromise = this.$http.get(fixDomain('/Database/coupon_component/selectCity'))
       .then(
         response => {
           if (response && response.data && response.data.status == 200) {

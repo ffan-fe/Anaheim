@@ -68,6 +68,8 @@
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-ngdocs": "^0.2.10",
+    "http-proxy-middleware": "^0.17.2",
+    "ng-file-upload": "^12.2.13",
     "restangular": "^1.5.2",
     "textangular": "^1.5.12",
     "ui-select": "^0.19.6"
