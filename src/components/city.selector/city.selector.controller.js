@@ -1,6 +1,6 @@
 import loaclData from './localData.js';
 import angular from 'angular';
-import fixDomain from '../../index.js'
+import { fixDomain } from '../../index.js'
 
 'use strict';
 
@@ -32,7 +32,6 @@ export default class CitySelectorController {
     this.database = database;
     // 做回填的时候, 也需要回填各种状态, 这里记录好有变化的省份, 然后上下检查, 比较方便
     this.fillProvinceList = [];
-    console.log("fixDomain ", fixDomain);
   }
   $onInit() {
     // 如果外部提供了数据集, 那么就不再发请求了
