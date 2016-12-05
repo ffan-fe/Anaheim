@@ -73,7 +73,7 @@ NG_DOCS={
       "type": "directive",
       "moduleName": "datetimepicker",
       "shortDescription": "",
-      "keywords": "api binding datetimepicker directive disabled end-model enddisabled endmodel github io max min minutestep minview model modeltype range separator start-model startdisabled startmodel startview symbol type vm yyyy-mm-dd"
+      "keywords": "api binding datetimepicker directive disabled end-model enddisabled endmodel github io max min minutestep minview model modeltype placeholders range separator start-model startdisabled startmodel startview symbol type vm yyyy-mm-dd"
     },
     {
       "section": "api",
@@ -118,7 +118,7 @@ NG_DOCS={
       "type": "directive",
       "moduleName": "transfer",
       "shortDescription": "",
-      "keywords": "Popconfirm pop title vm"
+      "keywords": "add-all-btn add-btn addallbtn addbtn api binding chuxin datasource del-all-btn del-btn delallbtn delbtn directive false github io key nnn operations placeholders serversearch showleft-search showleftsearch showright-search showrightsearch source-data sourcedata storename symbol targetdata testing titles transfer true vm"
     }
   ],
   "apis": {
