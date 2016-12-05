@@ -7,16 +7,19 @@ import ffanRadioboxGroup from './src/components/radiobox.group';
 import ffanCitySelector from './src/components/city.selector';
 import ffanTransfer from './src/components/transfer';
 import ffanDatetimepicker from './src/components/datetimepicker';
-import bpServices from './src/service/index.js'
-import checkboxtree from './src/components/checkboxtree/index.js'
-import multiselect from './src/components/multiselect/index.js'
-import bpDirective from './src/directive/index.js'
-import formTpl from './src/template/form/index.js'
-import listTpl from './src/template/list/index.js'
+import bpServices from './src/service/index.js';
+import checkboxtree from './src/components/checkboxtree';
+import multiselect from './src/components/multiselect';
+import bpDirective from './src/directive';
+import formTpl from './src/template/form';
+import listTpl from './src/template/list';
+import fixURL from './src/tool/fixurl';
+import ffanPopConfirm from './src/components/popconfirm';
 
 'use strict';
 
-export {ffanButton as Button,
+export {
+  ffanButton as Button,
   ffanCheckbox as Checkbox,
   ffanCheckboxGroup as CheckboxGroup,
   ffanRadiobox as Radiobox,
@@ -24,12 +27,14 @@ export {ffanButton as Button,
   ffanCitySelector as CitySelector,
   ffanTransfer as Transfer,
   ffanDatetimepicker as Datetimepicker,
+  ffanPopConfirm as PopConfirm,
   bpServices ,
   checkboxtree,
   multiselect,
   bpDirective,
   formTpl,
-  listTpl
+  listTpl,
+  fixURL
 }
 
 

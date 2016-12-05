@@ -1,6 +1,6 @@
 {
   "name": "fancyui",
-  "version": "0.4.7",
+  "version": "1.1.6",
   "description": "angular ui components",
   "main": "dist/anaheim.js",
   "scripts": {
@@ -39,13 +39,16 @@
     "gulp-babel": "^6.1.2",
     "gulp-rename": "^1.2.2",
     "gulp-template": "^4.0.0",
+    "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.6",
     "html-webpack-plugin": "^2.19.0",
     "jquery": "^2.2.0",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
+    "lodash": "^4.16.6",
     "moment": "^2.13.0",
     "ng-annotate-loader": "^0.1.0",
+    "ng-include-loader": "0.0.3",
     "prismjs": "^1.5.1",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.13.1",
@@ -57,6 +60,7 @@
   "dependencies": {
     "angular": "^1.5.6",
     "angular-ui-router": "^0.3.1",
+    "bp-ajax": "0.0.2",
     "bp-datetimepicker": "0.0.1",
     "classnames": "^2.2.5",
     "ffan-ng-table": "0.0.1",

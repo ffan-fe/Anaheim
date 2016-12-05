@@ -9,6 +9,7 @@ import 'textAngular/dist/textAngular-sanitize'
 import 'textAngular/dist/textAngular.css'
 import 'ui-select';
 import 'ui-select/dist/select.css'
+import './lib/css/font-awesome.css'
 
 import component from './ui.component';
 import ButtonShow from './button/'
@@ -18,6 +19,7 @@ import TransferShow from './transfer';
 import CitySelector from './cityselector';
 import Datetimepicker from './datetimepicker';
 import GetStarted from './get-started/get-started';
+import popConfirm from './popconfirm';
 
 import 'bp-admin-skin'
 
@@ -54,6 +56,8 @@ angular.module('exampleapp', [
   CitySelector.name,
   Datetimepicker.name,
   GetStarted.name,
+  nav.name,
+  popConfirm.name,
   nav.name,
   form.name,
   list.name,
@@ -96,6 +100,10 @@ angular.module('exampleapp', [
       .state('getstarted', {
         url: '/getstarted',
         template: '<ui-get-started></ui-get-started>'
+      })
+      .state('popconfirm', {
+        url: '/popconfirm',
+        template: '<pop-confirm-show></pop-confirm-show>'
       });
 
     $urlRouterProvider.otherwise('/getstarted');
