@@ -1,0 +1,9 @@
+<div class="timer">
+  <button type="button" class="btn bp-btn-primary menu-bar" ng-click="controller.showList($event)">最新{{controller.index}}<span class="icon"></span></button>
+  <div id="timerList" ng-if="controller.showFlag" class="bp-container timer-list" ng-class={'side-right':controller.forRight}>
+    <div class="arrow" ng-class={'arrow-right':controller.forRight}></div>
+    <button type="button" class="btn bp-btn-default timeNode-btn" ng-repeat="timeNode in controller.timeNodes" ng-click="controller.select(timeNode)">{{timeNode}}</button>
+  </div>
+</div>
+
+

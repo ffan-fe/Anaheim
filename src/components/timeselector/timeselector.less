@@ -1,0 +1,65 @@
+.timer{
+  display: inline-block;
+  position: relative;
+  //下拉三角定位的值
+  @icon-side:50%-8px;
+  //时间点列表的背景色
+  @timeList: rgba(0,0,0,0.5);
+  //每个时间button的宽度，时间点列表的总宽度也根据这个变量变化
+  @btn-width: 70px;
+  ul,li{
+    list-style: none;
+  }
+  //显示的时间点列表样式
+  .timer-list{
+    background: @timeList;
+    padding: 15px;
+    position: absolute;
+    top: 115%;
+    margin: 10px 0;
+    width: (@btn-width+15px) * 6;
+    .arrow{
+      content: '';
+      width: 0;
+      height: 0;
+      border: 10px solid transparent;
+      border-bottom: 10px solid @timeList;
+      position: absolute;
+      top: -20px;
+    }
+  }
+  //每一个时间点的样式
+  .timeNode-btn{
+    margin: 0 5px 2px;
+    width: @btn-width;
+  }
+  //下拉三角
+  .icon{
+    position: absolute;
+    top: @icon-side;
+    right: 8%;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 8px solid #fff;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+  }
+  //时间点列表
+  .menu-bar{
+    text-align: left;
+    width: 120px;
+    position: relative;
+  }
+  //列表向右展示
+  .side-right{
+    right: 0;
+  }
+  .arrow-right{
+    right: 15px;
+  }
+}
+
+
+

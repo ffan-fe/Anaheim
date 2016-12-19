@@ -20,6 +20,7 @@ import CitySelector from './cityselector';
 import Datetimepicker from './datetimepicker';
 import GetStarted from './get-started/get-started';
 import popConfirm from './popconfirm';
+import timer from './timeselector'
 
 import 'bp-admin-skin'
 
@@ -67,7 +68,8 @@ angular.module('exampleapp', [
   alert.name,
   hint.name,
   generateConfig.name,
-  fancyui.name
+  fancyui.name,
+  timer.name
 ])
   //.component('ui', component)
   .config(($stateProvider, $urlRouterProvider) => {
@@ -104,6 +106,10 @@ angular.module('exampleapp', [
       .state('popconfirm', {
         url: '/popconfirm',
         template: '<pop-confirm-show></pop-confirm-show>'
+      })
+      .state('timer',{
+        url: '/timer',
+        template: '<timer></timer>'
       });
 
     $urlRouterProvider.otherwise('/getstarted');
