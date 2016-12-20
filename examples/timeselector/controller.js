@@ -5,7 +5,7 @@ export default class timeSelector {
   constructor($scope){
     'ngInject';
     this.scope = $scope;
-    this.scope.$on('Timer',function(event, data){
+    this.scope.$on('timeselector',function(event, data){
       console.log('时间点', data);
     })
   }

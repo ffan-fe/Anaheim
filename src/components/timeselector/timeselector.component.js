@@ -13,8 +13,8 @@ let componentDefine = {
   controller,
   controllerAs: 'controller',
   bindings: {
-    defaultTime: '=?defaultTime',
-    timeNodes: '=?timeNodes',
+    stateTime: '=?stateTime',
+    timeList: '=?timeList',
     forRight: '=?forRight'
   }
 }
