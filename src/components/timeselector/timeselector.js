@@ -45,7 +45,7 @@ export default class Timeselector extends Component {
       this.index = this.stateTime;
       this.sendTimer();
     }
-    this.domPos();
+    this.locationTrack();
   }
 
   /**
@@ -101,8 +101,6 @@ export default class Timeselector extends Component {
    */
   showList($event){
     $event.stopPropagation();
-    //console.log('scope',this.scope);
-    //console.log('this',this);
     if(this.showFlag){
       this.showFlag = false;
     }else{
@@ -128,15 +126,15 @@ export default class Timeselector extends Component {
   }
 
   /**
-   * 获取位置
+   * 获取按钮的位置,由于时间列表显示左右
+   * 这里有一个问题,如果页面中有多个事件选择器,只会计算第一个的距离,
    */
-  domPos(){
-    console.log('window',window);
-    //scroll
-    this.wWidth = document.body.clientWidth;
-    this.btnWidth = document.getElementById('menuBtn').style.left;
-    console.log('window的宽度',this.wWidth);
-    console.log('btn的宽度',this.btnWidth);
+  locationTrack(){
+    let winWidth = document.body.clientWidth, half_winWidth = winWidth/2;
+    let btnOffset = document.getElementById('menuBtn').offsetLeft;
+    if(btnOffset > half_winWidth){
+      this.btnOnRight = true;
+    }
   }
 
   /**
