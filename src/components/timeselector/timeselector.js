@@ -111,19 +111,54 @@ export default class Timeselector extends Component {
   /**
    * 排序
    */
-  sortList(){
-    let sourceList = this.timeNodes, completeList = [], num = null, cur = {};
-    for(let i=0; i<sourceList.length; i++){
-      num = this.formatData(sourceList[i]);
-      cur[i] = i;
-      completeList.push(num);
-    }
-    completeList.sort(function(a, b){
-      return b-a;
-    });
-    console.log('排序后的',completeList);
-    return completeList;
-  }
+  //sortTimeNode(){
+  //  let arrayMS = [], arrayS = [], arrayM = [], arrayH = [], arrayD = [];
+  //  for(var i=0; i<this.timeNodes.length; i++){
+  //    if(this.timeNodes[i].indexOf('毫秒') >0 || this.timeNodes[i].indexOf('ms') >0){
+  //      arrayMS.push(this.timeNodes[i]);
+  //    }
+  //    if(this.timeNodes[i].indexOf('秒') >0 || this.timeNodes[i].indexOf('s') >0){
+  //      arrayS.push(this.timeNodes[i]);
+  //    }
+  //    if(this.timeNodes[i].indexOf('分钟') >0 || this.timeNodes[i].indexOf('m') >0){
+  //      arrayM.push(this.timeNodes[i]);
+  //    }
+  //    if(this.timeNodes[i].indexOf('小时') >0 || this.timeNodes[i].indexOf('h') >0){
+  //      arrayH.push(this.timeNodes[i]);
+  //    }
+  //    if(this.timeNodes[i].indexOf('天') >0 || this.timeNodes[i].indexOf('d') >0){
+  //      arrayD.push(this.timeNodes[i]);
+  //    }
+  //  }
+  //  this.sortAry(arrayMS, '毫秒', 'ms');
+  //  console.log(arrayH);
+  //  this.sortAry(arrayS, '秒', 's');
+  //  console.log(arrayM);
+  //  this.sortAry(arrayM, '分钟', 'm');
+  //  console.log(arrayD);
+  //  this.sortAry(arrayH, '小时', 'h');
+  //  this.sortAry(arrayD, '天', 'd');
+  //  this.timeNodes = arrayMS.concat(arrayS).concat(arrayM).concat(arrayH).concat(arrayD);
+  //  console.log(this.timeNodes);
+  //}
+  //
+  //sortAry(array, str1, str2) {
+  //  array = ['700天', '50天'];
+  //  str1 = '天';
+  //  str2 = 'd';
+  //  for(let i = 0; i < array.length; i++) {
+  //    array[i].replace(str1, '');
+  //    array[i].replace(str2, '');
+  //  }
+  //  array.sort(function (a, b) {
+  //    return a - b;
+  //  });
+  //  for(let i=0; i<array.length; i++){
+  //    array[i] += str1;
+  //  }
+  //  console.log('排序后的',array);
+  //  return array;
+  //}
 
   /**
    * 获取按钮的位置,由于时间列表显示左右
